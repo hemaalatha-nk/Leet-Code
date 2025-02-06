@@ -9,9 +9,8 @@ class Solution:
                 if(len(t)>0 and len(t)>long_str):
                     long_str=len(t)
                 t=t.split(s[i])[1]
-                t= t+s[i]
-            else:
-                t= t+s[i]
+            t= t+s[i]
+
         if(len(t)>long_str):
             long_str=len(t) 
         return long_str
