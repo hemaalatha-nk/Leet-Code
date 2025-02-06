@@ -6,9 +6,8 @@ class Solution:
         long_str=0
         for i in range(1,len(s)):
             if s[i] in t:
-                if(len(t)>0):
-                    if(len(t)>long_str):
-                        long_str=len(t)
+                if(len(t)>0 and len(t)>long_str):
+                    long_str=len(t)
                 t=t.split(s[i])[1]
                 t= t+s[i]
             else:
