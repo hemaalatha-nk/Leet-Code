@@ -1,10 +1,11 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        s_x=str(x)
-        if x < 0 or (x % 10 == 0 and x != 0):  # Negative numbers and numbers ending in 0 (except 0) are not palindromes
+        if x < 0 or (x % 10 == 0 and x != 0):  
             return False
-        return s_x == s_x[::-1]
 
-        
+        reversed_half = 0
+        while x > reversed_half:
+            reversed_half = reversed_half * 10 + x % 10
+            x //= 10
 
-        
+        return x == reversed_half or x == reversed_half // 10
