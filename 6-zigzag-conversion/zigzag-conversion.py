@@ -3,7 +3,6 @@ class Solution:
         if(numRows==1):
           return s
         res=[[] for _ in range(numRows)]
-
         j=0
         downwards=1
 
