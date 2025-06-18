@@ -7,13 +7,10 @@ class Solution:
         downwards=1
 
         for i in range(len(s)):
-            
             res[j].append(s[i])
-            
             if(j==(numRows-1)):
                 downwards=-1
             if(j==0):
-                # print(j, downwards)
                 downwards=1
             j=j+downwards
 
