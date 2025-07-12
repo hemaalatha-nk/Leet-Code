@@ -4,7 +4,7 @@ class Solution:
         l=re.findall("[aAIiEeOoUu]",s)
         lLen=len(l)
         
-        print(l)
+    
         for i in range(len(s)-1,-1,-1):
           
             if s[i] in ["a","A","I","i","E","e","O","o",'U',"u"]:
