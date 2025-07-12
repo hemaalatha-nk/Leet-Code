@@ -15,15 +15,16 @@ class Solution:
                 s[left], s[right]= s[right], s[left]
                 left+=1
                 right-=1
-        return "".join(s)
-
-
-
-        l=re.findall("[aAIiEeOoUu]",s)
-        for i in range(len(s)-1,-1,-1):
-            if s[i] in ["a","A","I","i","E","e","O","o",'U',"u"]:
-                s=s[:i]+ l[0]+s[i+1:]
-                l.pop(0)
+        s="".join(s)
         return s
+
+
+
+        # l=re.findall("[aAIiEeOoUu]",s)
+        # for i in range(len(s)-1,-1,-1):
+        #     if s[i] in ["a","A","I","i","E","e","O","o",'U',"u"]:
+        #         s=s[:i]+ l[0]+s[i+1:]
+        #         l.pop(0)
+        # return s
 
         
