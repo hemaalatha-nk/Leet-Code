@@ -14,7 +14,7 @@ class Solution:
             if(majority_ele[nums[i]]>n):
                 n=majority_ele[nums[i]]
                 result=nums[i]
-            print(majority_ele[nums[i]] )
+            # print(majority_ele[nums[i]] )
         return result
 
 
