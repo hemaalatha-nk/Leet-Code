@@ -3,7 +3,7 @@ class Solution:
 
         # majority_ele={}
         # result=0
-        n=len(nums)/2
+        # n=len(nums)/2
 
         # for i in range(0,len(nums)):
         #     if nums[i] in majority_ele:
@@ -18,7 +18,7 @@ class Solution:
         # nums=sorted(nums)
         # print(int(n),nums)
 
-        return sorted(nums)[int(n)]
+        return sorted(nums)[int(len(nums)/2)]
 
 
         
