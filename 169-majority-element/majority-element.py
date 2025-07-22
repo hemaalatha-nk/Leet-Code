@@ -15,10 +15,10 @@ class Solution:
         #         result=nums[i]
         #     # print(majority_ele[nums[i]] )
         
-        nums=sorted(nums)
+        # nums=sorted(nums)
         # print(int(n),nums)
 
-        return nums[int(n)]
+        return sorted(nums)[int(n)]
 
 
         
