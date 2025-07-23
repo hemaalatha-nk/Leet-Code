@@ -2,7 +2,7 @@ class Solution:
     def hIndex(self, citations: List[int]) -> int:
         n=len(citations)
         counts=[0]*(n+1)
-        print(counts)
+        # print(counts)
         
 
         for i in range(0, n):
@@ -10,7 +10,7 @@ class Solution:
                 counts[citations[i]]+=1
             else:
                 counts[n]+=1
-        print(counts)
+        # print(counts)
 
         papers=counts[n]
         h=n
