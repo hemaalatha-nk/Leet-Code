@@ -1,6 +1,6 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        reachable = 0
+      
         flag=len(nums)-1
         i=flag-1
 
