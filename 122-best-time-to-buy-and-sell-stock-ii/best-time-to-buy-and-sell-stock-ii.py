@@ -6,11 +6,7 @@ class Solution:
         result=0
 
         for i in range(1,len(prices)):
-            if(prices[i]< prices[i-1]  ):
-              
-               
-                    print(i)
-
+            if(prices[i]< prices[i-1]):
                     high=i-1
                     # low=i
                     result=prices[high]-prices[low] +result
@@ -20,7 +16,7 @@ class Solution:
 
             elif(prices[low]>prices[i]):
                 low=i
-                
+
             if(i+1==len(prices) and prices[low]<prices[i]):
                     result=prices[i]-prices[low] +result
                     print("case last, i", i)
@@ -29,9 +25,9 @@ class Solution:
         #     if(prices[low] > prices[high]):
         #         low=high
         #         result= max() prices[]
-        #     # else:
-        #         # high
-        #     high+=1
+            # else:
+                # high
+            # high+=1
 
 
         return result
