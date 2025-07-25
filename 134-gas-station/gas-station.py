@@ -5,7 +5,6 @@ class Solution:
             return -1
         
         total_cost=0
-        idx=0
         start=0
 
         for i in range(0, len(gas)):
