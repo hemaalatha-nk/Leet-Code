@@ -3,16 +3,16 @@ class Solution:
 
         # s=list(s)
         h_table={'I':1, 'V': 5, 'X':10, 'L':50,'C':100,'D':500,'M':1000}
-        res=h_table[s[0]]
-        prev=res
-        i=1
+        res=0
+        i=0
 
         while i < len(s):
-            if(prev>=h_table[s[i]]):
-                res+=h_table[s[i]]               
+            if(i+1<len(s) and h_table[s[i+1]]>h_table[s[i]]):
+                print(h_table[s[i+1]], h_table[s[i]])
+                res-=h_table[s[i]]               
             else:
-                res=res-(2*prev) + h_table[s[i]]
-            prev=h_table[s[i]]
+                res+= h_table[s[i]]
+            print(res)
             i+=1
 
         
