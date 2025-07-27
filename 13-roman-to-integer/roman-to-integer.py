@@ -4,7 +4,7 @@ class Solution:
         # s=list(s)
         h_table={'I':1, 'V': 5, 'X':10, 'L':50,'C':100,'D':500,'M':1000}
         res=h_table[s[0]]
-        prev=h_table[s[0]]
+        prev=res
         i=1
 
         while i < len(s):
