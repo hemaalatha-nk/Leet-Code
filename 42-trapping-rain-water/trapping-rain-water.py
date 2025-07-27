@@ -3,8 +3,7 @@ class Solution:
 
         res=0
         l, r=0, len(height)-1
-        lmax=height[l]
-        rmax=height[r]
+        lmax, rmax=height[l], height[r]
 
         while l<r:
             if(lmax < rmax):
