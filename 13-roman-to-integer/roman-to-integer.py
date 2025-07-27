@@ -8,11 +8,9 @@ class Solution:
 
         while i < len(s):
             if(i+1<len(s) and h_table[s[i+1]]>h_table[s[i]]):
-                print(h_table[s[i+1]], h_table[s[i]])
                 res-=h_table[s[i]]               
             else:
                 res+= h_table[s[i]]
-            print(res)
             i+=1
 
         
