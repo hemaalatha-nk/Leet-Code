@@ -8,7 +8,6 @@ class Solution:
         i=1
 
         while i < len(s):
-            print(h_table[s[i]], prev)
             if(prev>=h_table[s[i]]):
                 res+=h_table[s[i]]
                 
@@ -17,18 +16,6 @@ class Solution:
             prev=h_table[s[i]]
             i+=1
 
-
-        # for i in range(len(s)-2, -1, -1):
-        #     if s[i] in h_table:
-        #         print(h_table[s[i]], prev)
-        #         if(prev > h_table[s[i]]):
-        #             res+= prev - h_table[s[i]] 
-        #         else:
-        #             res+=h_table[s[i]]
-        #         print(res)
-        #         prev= h_table[s[i]]
-        #     else:
-        #         return 0
         
         return res
 
