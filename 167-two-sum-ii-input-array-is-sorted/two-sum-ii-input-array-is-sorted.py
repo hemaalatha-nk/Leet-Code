@@ -2,8 +2,8 @@ class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
 
         left_p= 0
-        right_p= len(numbers)-1
-        mid_p=int(len(numbers)/2)-1
+        right_p= 0
+        mid_p=0
 
         if(right_p==1 and numbers[0]+numbers[1]==target):
             return [1,2]
@@ -12,7 +12,6 @@ class Solution:
             left_p=i+1
             right_p= len(numbers)-1
             mid_p=int((left_p+2+right_p)/2)-1
-
 
             while right_p >= left_p:
 
