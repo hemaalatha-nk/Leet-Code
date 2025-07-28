@@ -4,14 +4,11 @@ class Solution:
         if(sum(nums)<target):
             return 0
         l=0
-        r=0
         sums=0
         ans=float("inf")
-        while r< len(nums):
+        for r in range(len(nums)):
             sums+=nums[r]
-            if(sums>=target ):
-                # ans=r-l+1
-                while sums>=target:
+            while sums>=target:
                     ans=min(r-l+1, ans)
                     sums-=nums[l]
                     l+=1
