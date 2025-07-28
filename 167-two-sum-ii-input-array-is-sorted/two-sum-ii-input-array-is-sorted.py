@@ -1,12 +1,13 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
 
-        left_p= 0
-        right_p= 0
-        mid_p=0
-
+        right_p= len(numbers)-1
         if(right_p==1 and numbers[0]+numbers[1]==target):
             return [1,2]
+        
+        left_p= 0
+        mid_p=len(numbers)/2
+
 
         for i in range(0, len(numbers)):
             left_p=i+1
