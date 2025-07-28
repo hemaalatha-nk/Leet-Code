@@ -12,13 +12,11 @@ class Solution:
             left_p=i+1
             right_p= len(numbers)-1
             mid_p=int((left_p+2+right_p)/2)-1
-            print("1st",right_p,mid_p,left_p)
 
 
             while right_p >= left_p:
 
                 diffs=target-numbers[i]
-                print(diffs, mid_p)
                 if( diffs==numbers[mid_p]):
                     return [1+i, 1+mid_p]
                 elif (diffs>numbers[mid_p]):
@@ -27,7 +25,6 @@ class Solution:
                 else:
                     right_p=mid_p-1
                     mid_p=int((left_p+2+right_p)/2)-1
-                print(right_p,mid_p,left_p)
         return False
 
 
