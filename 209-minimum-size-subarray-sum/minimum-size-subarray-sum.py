@@ -3,8 +3,7 @@ class Solution:
 
         if(sum(nums)<target):
             return 0
-        l=0
-        sums=0
+        l,sums=0,0
         ans=float("inf")
         for r in range(len(nums)):
             sums+=nums[r]
