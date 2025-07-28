@@ -9,14 +9,12 @@ class Solution:
         ans=float("inf")
         while r< len(nums):
             sums+=nums[r]
-            print(sums)
             if(sums>=target ):
                 # ans=r-l+1
                 while sums>=target:
                     ans=min(r-l+1, ans)
                     sums-=nums[l]
                     l+=1
-                    print("inside",sums)
             r+=1
         return ans
                     
