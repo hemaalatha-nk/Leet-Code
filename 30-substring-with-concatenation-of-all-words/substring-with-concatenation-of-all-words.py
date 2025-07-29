@@ -2,8 +2,7 @@ class Solution:
     def findSubstring(self, s: str, words: List[str]) -> List[int]:
 
         l_w=len(words[0])
-        l=0
-        r= l_w*len(words)
+        l, r=0,l_w*len(words)
         ans=[]
 
         while l<len(s) and r<=len(s):
