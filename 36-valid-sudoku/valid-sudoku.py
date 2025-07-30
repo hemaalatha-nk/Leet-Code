@@ -4,9 +4,10 @@ class Solution:
         for r in range(0,9):
             row=set()
             for c in range(0,9):
-                if(board[r][c] in row):
+                item=board[r][c]
+                if(item in row):
                     return False
-                elif(board[r][c]=="."):
+                elif(item=="."):
                     continue
                 else:
                     row.add(board[r][c])
@@ -14,12 +15,13 @@ class Solution:
         for c in range(0,9):
             col=set()
             for r in range(0,9):
-                if(board[r][c] in col):
+                item=board[r][c]
+                if(item in col):
                     return False
-                elif(board[r][c]=="."):
+                elif(item=="."):
                     continue
                 else:
-                    col.add(board[r][c])
+                    col.add(item)
 
 
         grid=[(0,0),(0,3),(0,6),
@@ -30,10 +32,11 @@ class Solution:
             box=set()
             for r in range(i,i+3):
                 for c in range(j,j+3):
-                    if(board[r][c] in box):
+                    item=board[r][c] 
+                    if(item in box):
                         return False
-                    elif(board[r][c]!="."):
-                        box.add(board[r][c])
+                    elif(item!="."):
+                        box.add(item)
         return True
 
 
