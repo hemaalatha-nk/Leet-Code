@@ -10,7 +10,7 @@ class Solution:
                 elif(item=="."):
                     continue
                 else:
-                    row.add(board[r][c])
+                    row.add(item)
             
         for c in range(0,9):
             col=set()
