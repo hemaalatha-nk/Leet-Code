@@ -14,13 +14,13 @@ class Solution:
             # go right
             for i in range(colBegin,colEnd+1):
                 # print("i",i)
-                print(matrix[rowBegin][i])
+                # print(matrix[rowBegin][i])
                 ans.append(matrix[rowBegin][i])
             rowBegin+=1
 
             # go down
             for j in range(rowBegin,rowEnd+1):
-                print(matrix[j][colEnd])
+                # print(matrix[j][colEnd])
                 ans.append(matrix[j][colEnd])
             colEnd-=1
 
@@ -29,14 +29,14 @@ class Solution:
             if rowBegin<=rowEnd:
                 for k in range( colEnd,colBegin-1,-1):
                     # print("k",k)
-                    print(matrix[rowEnd][k])
+                    # print(matrix[rowEnd][k])
                     ans.append(matrix[rowEnd][k])
                 rowEnd-=1
 
             #go up
             if colBegin<=colEnd:
                 for l in range(rowEnd,rowBegin-1,-1):
-                    print(matrix[l][colBegin])
+                    # print(matrix[l][colBegin])
                     ans.append(matrix[l][colBegin])
                 colBegin+=1
     
