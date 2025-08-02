@@ -8,10 +8,7 @@ class Solution:
             _s="".join(sorted(s))
             if(_s not in hash_map):
                 hash_map[_s] = []
-                hash_map[_s].append(s)
-            else:
-                strs
-                hash_map[_s].append(s)
+            hash_map[_s].append(s)
 
         return list(hash_map.values())
 
