@@ -5,22 +5,20 @@ class Solution:
             return False
         hash_map={}
         hash_map_s={}
-        print(S)
+        # print(S)
         
-        i=0
-        for p in pattern:
-            print(p,s[i],hash_map,hash_map_s, p in hash_map and s[i] in hash_map_s  )
-            if(p in hash_map and hash_map[p]!=s[i] ):
+        for c,w in zip(pattern,s):
+            # print(c,w,hash_map,hash_map_s, p in hash_map and s[i] in hash_map_s  )
+            if(c in hash_map and hash_map[c]!=w):
                 return False
-            if s[i] in hash_map_s and hash_map_s[s[i]]!=p :
+            if w in hash_map_s and hash_map_s[w]!=c:
                 return False
             else:
-                hash_map[p]=s[i]
-                hash_map_s[s[i]]=p
-            i+=1
+                hash_map[c]=w
+                hash_map_s[w]=c
             
         
-        print(hash_map_s,hash_map)
+        # print(hash_map_s,hash_map)
         return True
             
  
