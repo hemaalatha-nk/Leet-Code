@@ -6,7 +6,7 @@ class Solution:
         hash_map={}
         for s in strs:
             _s="".join(sorted(s))
-            if(_s not in hash_map):
+            if _s not in hash_map:
                 hash_map[_s] = []
             hash_map[_s].append(s)
 
