@@ -7,9 +7,9 @@ class Solution:
         while True:
             output=0
             while temp:
-                digit=temp%10
-                digit=digit ** 2
-                output+= digit
+                # digit=temp%10
+                # digit=digit ** 2
+                output+= (temp%10) ** 2
                 temp=temp//10 
 
             if output==1:
