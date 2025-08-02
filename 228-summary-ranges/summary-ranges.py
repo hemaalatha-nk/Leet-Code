@@ -8,7 +8,7 @@ class Solution:
             return [str(nums[0])]
 
         for i in range(0,len(nums)-1):
-            print(nums[i]+1,nums[i+1],start,i)
+            # print(nums[i]+1,nums[i+1],start,i)
             if(nums[i]+1!=nums[i+1]):
                 if(start==i):
                     ans.append(f'{nums[start]}')
@@ -18,7 +18,7 @@ class Solution:
                 if(start==len(nums)-1):
                     ans.append(f'{nums[start]}')
             else:
-                print("lol",i,len(nums)-2 , start)
+                # print("lol",i,len(nums)-2 , start)
                 if(i==len(nums)-2 ):
                     ans.append(f"{nums[start]}->{nums[i+1]}")
 
