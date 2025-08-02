@@ -4,8 +4,7 @@ class Solution:
         intervals.sort(key=lambda interval: interval[0])
 
         ans=[]
-        start=intervals[0][0]
-        end=intervals[0][1]
+ 
 
         for i in intervals:
 
