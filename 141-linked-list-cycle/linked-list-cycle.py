@@ -7,10 +7,10 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
 
-        dummy=ListNode()
-        dummy.next=head
+        if head is None or head.next is None:
+            return False
 
-        f= s=dummy
+        f= s=head
 
         while f and f.next:
 
