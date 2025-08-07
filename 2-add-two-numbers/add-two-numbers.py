@@ -6,21 +6,41 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
-        dummy = ListNode()  # Dummy node to simplify result list handling
-        current = dummy
-        carry = 0  # To handle carry-over values
+        n1=""
+        n2=""
 
-        while l1 or l2 or carry:
-            val1 = l1.val if l1 else 0  # Get value from l1, or 0 if None
-            val2 = l2.val if l2 else 0  # Get value from l2, or 0 if None
+        list1=l1
+        list2=l2
+
+        while list1!=None or list2!=None:
+
+            if list1!=None:
+                n1=str(list1.val)+n1
+                list1=list1.next
+            if list2!=None:
+                n2=str(list2.val)+n2
+                list2=list2.next
+        
+        print(n1,n2)
+        n1=str(int(n1)+int(n2))
+        print(n1)
+
+        res=ListNode()
+        cur=res
+
+        for i in range(len(n1),0,-1):
+            print(n1[i-1:i])
+            print("i:",i)
+            cur.val=int(n1[i-1:i])
+            if(i!=1):
+                c1=ListNode()
+                cur.next=c1
+                cur=c1
             
-            total = val1 + val2 + carry  # Sum of two digits + carry
-            carry = total // 10  # Carry for next iteration
-            current.next = ListNode(total % 10)  # Create new node with remainder
+            
+        return res
 
-            # Move pointers forward
-            current = current.next
-            if l1: l1 = l1.next
-            if l2: l2 = l2.next
 
-        return dummy.next  # Return the next node after dummy
+
+
+       
