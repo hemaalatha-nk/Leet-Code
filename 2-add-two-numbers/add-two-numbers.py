@@ -21,16 +21,14 @@ class Solution:
                 n2=str(list2.val)+n2
                 list2=list2.next
         
-        print(n1,n2)
+
         n1=str(int(n1)+int(n2))
-        print(n1)
+
 
         res=ListNode()
         cur=res
 
         for i in range(len(n1),0,-1):
-            print(n1[i-1:i])
-            print("i:",i)
             cur.val=int(n1[i-1:i])
             if(i!=1):
                 c1=ListNode()
