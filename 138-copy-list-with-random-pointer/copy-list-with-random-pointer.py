@@ -12,7 +12,7 @@ class Solution:
         if not head:
             return None
 
-        old_to_new={}
+        old_to_new={None: None}
         cur=head
    
 
@@ -24,8 +24,8 @@ class Solution:
         cur=head
         while cur:
             new_node=old_to_new[cur]
-            new_node.next= old_to_new[cur.next] if cur.next else None
-            new_node.random= old_to_new[cur.random] if cur.random else None
+            new_node.next= old_to_new[cur.next] #if cur.next else None
+            new_node.random= old_to_new[cur.random] #if cur.random else None
             cur=cur.next
         
         return old_to_new[head]
