@@ -12,15 +12,11 @@ class Solution:
         while dummy:
             dummy=dummy.next
             k+=1
-        print(k)
 
-        print(k-n)
         dummy=ListNode()
         dummy.next=head
         for i in range(k-n-1):
-            print(dummy.val)
             dummy=dummy.next
-        print("change: ", dummy.val)
         if k-n==1:
             dummy.next=head.next
             return dummy.next
