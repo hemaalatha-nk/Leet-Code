@@ -8,6 +8,7 @@ class Solution:
 
         dummy=head
         prev=None
+        first=ListNode()
 
         l=0
         while dummy:
@@ -17,9 +18,6 @@ class Solution:
 
         if(k>0 and l>0):
             k=k%l
-        else:
-            return(head)
-
 
         if dummy and dummy.next:
             for i in range(k):
@@ -30,7 +28,6 @@ class Solution:
                         prev.next=None
 
 
-                first=ListNode()
                 first.next= dummy
                 first.next.next=head
                 head=first.next
