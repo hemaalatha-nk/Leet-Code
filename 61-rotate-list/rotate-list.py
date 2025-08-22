@@ -17,7 +17,8 @@ class Solution:
 
         if(k>0 and l>0):
             k=k%l
-
+        else:
+            return(head)
 
 
         if dummy and dummy.next:
