@@ -8,19 +8,17 @@ class Solution:
 
         dummy=head
         prev=None
-        print(head)
 
         l=0
         while dummy:
             l+=1
             dummy=dummy.next
         dummy=head
-        # k=k%l
+
         if(k>0 and l>0):
             k=k%l
 
 
-        # k=k%len()
 
         if dummy and dummy.next:
             for i in range(k):
@@ -29,13 +27,11 @@ class Solution:
                     dummy=dummy.next
                     if dummy.next==None:
                         prev.next=None
-                    # else:
-                print(dummy.val)
+
 
                 first=ListNode()
                 first.next= dummy
                 first.next.next=head
                 head=first.next
 
-                print(head)
         return(head)
