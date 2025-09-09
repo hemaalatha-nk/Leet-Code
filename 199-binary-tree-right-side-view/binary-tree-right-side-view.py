@@ -13,11 +13,9 @@ class Solution:
         queue=[]
         res=[]
         queue.append(root)
-        print(queue)
 
         while queue:
             bfs=len(queue)
-            print(bfs)
             lastval=0
 
             for i in range(0,bfs):
@@ -29,7 +27,6 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
 
-                print(queue)
             
             res.append(node.val)
         return res
