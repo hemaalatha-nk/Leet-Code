@@ -3,8 +3,9 @@ class Solution:
         
         r=0
         l=len(s)
-        print(s[r:l])
         prevp=""
+        if len(s)==1:
+            return s
 
         while l>r:
             p=s[r:l]
